@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VENZON ARIOLA</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body
+    style="
+      background-image: url('image/wirewallpng3.png');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    "
+  >
+
+  <!-- Burger Menu Button -->
+  <button class="burger" onclick="toggleMenu()" >☰</button>
+   
+   <!-- HEADER BAR -->
+  <div class="header-bar">
+    <!-- Column 1: Profile -->
+    <div class="header-column profile-column">
+      <div class="profile">
+        <img src="image/usericon.png" alt="Profile Photo" class="profile-photo" />
+        <p class="fancy-text">
+          <span data-text="V">V</span>
+          <span data-text="E">E</span>
+          <span data-text="N">N</span>
+          <span data-text="Z">Z</span>
+          <span data-text="O">O</span>
+          <span data-text="N">N</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Column 2: Social Links -->
+    <div class="header-column">
+      <div class="image-container">
+        <a href="https://www.linkedin.com/in/venzon-ariola-081551274/" target="_blank" onclick="alert('Opens in a new tab!')">
+          <img src="image/graylinkedin.png" class="image" />
+        </a>
+        <a href="https://www.behance.net/venzonariola1" target="_blank" onclick="alert('Opens in a new tab!')">
+          <img src="image/grayBe.png" class="image" />
+        </a>
+        <a href="https://github.com/VenzZone" target="_blank" onclick="alert('Opens in a new tab!')">
+          <img src="image/graygit.png" class="image" />
+        </a>
+        <a href="#" onclick="showContactInfo(); return false;">
+          <img src="image/contact.png" class="image" alt="Contact Info" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Column 3: Dark Mode Toggle -->
+    <div class="header-column">
+      <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle Dark Mode">
+        <picture>
+          <img src="image/darkmode.gif" alt="Dark Mode Icon" width="60" height="35" />
+        </picture>
+      </button>
+    </div>
+
+    <!-- Column 4: Download CV -->
+    <div class="header-column">
+      <div class="cv-wrapper">
+        <button class="cv-button" id="cv-download-btn" onclick="openPDF()">
+         <img src="image/dlicon.png" alt="CV Icon" width="27" height="27" />
+         Get CV
+        </button>
+      </div>
+    </div>  
+  </div><!--End  DIV Column 4-->
+      
+    
+    </div>
+
+    <!-- Menu Bar -->
+    <div class="menu-bar">
+      <div class="menu-item active" onclick="setActive(this)">
+      <a href="#home" class="anchor-link" onclick="location.reload(); return false;">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+      </div>
+      <div class="menu-item" onclick="setActive(this)">
+        <a href="#profile" class="anchor-link">
+          <i class="fas fa-user"></i>
+          <span>Profile</span>
+        </a>
+      </div>
+
+      <div class="menu-item" onclick="toggleDropdown(this)">
+        <i class="fas fa-lightbulb"></i>
+        <span>Skills</span>
+        <div class="dropdown">
+          <a href="#graphic">🎨Graphic Artist</a>
+          <a href="#webdev">💻Web Dev</a>
+          <a href="#ict">🛠️ICT Support</a>
+        </div>
+      </div>
+
+      <div class="menu-item" onclick="setActive(this)">
+        <a href="#experience" class="anchor-link">
+          <i class="fas fa-briefcase"></i>
+          <span>Experience</span>
+        </a>
+      </div>
+      <div class="menu-item" onclick="setActive(this)">
+        <a href="#projects" class="anchor-link">
+          <i class="fas fa-tasks"></i>
+          <span>Projects</span>
+        </a>
+      </div>
+      <div class="menu-item" onclick="setActive(this)">
+        <a href="#trainings" class="anchor-link">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <span>Trainings</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="app-container"> <!--TOP SPACING -->
+    <!-- Start Container Profile -->
+      
+    <div id="profile" class="">
+    <br><br><br>
+
+    <div class="layout">
+  <!-- Row 1 -->
+  <div class="row1">
+      <div class="col-60" >
+          <br>
+          <h2 style="color: #fd6209;">Hello, I'm Venzon</h2>
+          <p><strong>Creative Graphic Artist | ICT Support Engineering | Innovative Web Developer</strong></p>
+          <br>
+          <p>
+            As a versatile professional with expertise in web development, ICT Support Engineering, and graphic design,
+            I bring a unique skill set that combines technical proficiency with creative innovation.
+          </p>
+          <p>
+             With a strong background in programming languages, troubleshooting software and hardware issues, and designing
+            visually appealing graphics, I am well-equipped to handle diverse projects and deliver top-notch results.
+          </p>
+          
+          <br><br><br><br><br><br><br><br><br><br><!-- <BR> For Spacing in PHONE MODE -->
+  
+      </div>
+     
+      <div class="col-40">
+         <img src="image/zone1.png" alt="Sample Image">
+      </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="row2">
+        <!-- Start 3 IMAGE HOVER -->
+          <div class="container">
+        <a href="#webdev" class="box">
+            <div class="imgBx">
+                <img src="image/webdev.png" alt="Web Development">
+            </div>
+            <div class="content">
+                <div>
+                    <h2>Web Developer</h2>
+                </div>
+            </div>
+        </a>
+    
+        <a href="#ict" class="box">
+            <div class="imgBx">
+                <img src="image/tech.png" alt="Graphic Design">
+            </div>
+            <div class="content">
+                <div>
+                    <h2>ICT Support Engineer</h2>
+                </div>
+            </div>
+        </a>
+    
+        <a href="#graphic" class="box">
+            <div class="imgBx">
+                <img src="image/graphic.png" alt="UI/UX Design">
+            </div>
+            <div class="content">
+                <div>
+                    <h2>Graphic Designer</h2>
+                </div>
+            </div>
+        </a>
+    </div>  <!-- End 3 IMAGE HOVER -->
+
+    <!-- START MARQUEE IMAGE -->
+            <div class="marquee-container">
+              <div class="marquee-wrapper">
+                  <div class="marquee-content">
+                    <img src="image/logos/epson.png" alt="Image 1">
+                    <img src="image/logos/office.png" alt="Image 2">
+                    <img src="image/logos/win.png" alt="Image 3">
+                    <img src="image/logos/acronis.png" alt="Image 4">
+                    <img src="image/logos/Pfsense.png" alt="Image 5">
+                    <img src="image/logos/office.png" alt="Image 6">
+                    <img src="image/logos/Ps.png" alt="Image 7">
+                    <img src="image/logos/Dw.png" alt="Image 8">
+                    <img src="image/logos/XD.png" alt="Image 9">
+                    <img src="image/logos/Ae.png" alt="Image 10">
+                    <img src="image/logos/Figma.png" alt="Image 12">
+                    <img src="image/logos/capcut.png" alt="Image 13">
+                    <img src="image/logos/canva.png" alt="Image 14">
+                    <img src="image/logos/HTML.png" alt="Image 16">
+                    <img src="image/logos/CSS.png" alt="Image 17">
+                    <img src="image/logos/JAVA.png" alt="Image 18">
+                    <img src="image/logos/wordpress.png" alt="Image 19">
+                    <img src="image/logos/xamp.png" alt="Image 20">
+
+                      <!-- Duplicate set to ensure smooth looping -->
+                      <img src="image/logos/epson.png" alt="Image 1">
+                      <img src="image/logos/office.png" alt="Image 2">
+                      <img src="image/logos/win.png" alt="Image 3">
+                      <img src="image/logos/acronis.png" alt="Image 4">
+                      <img src="image/logos/Pfsense.png" alt="Image 5">
+                      <img src="image/logos/office.png" alt="Image 6">
+                      <img src="image/logos/Ps.png" alt="Image 7">
+                      <img src="image/logos/Dw.png" alt="Image 8">
+                      <img src="image/logos/XD.png" alt="Image 9">
+                      <img src="image/logos/Ae.png" alt="Image 10">
+                      <img src="image/logos/Figma.png" alt="Image 12">
+                      <img src="image/logos/capcut.png" alt="Image 13">
+                      <img src="image/logos/canva.png" alt="Image 14">
+                      <img src="image/logos/HTML.png" alt="Image 16">
+                      <img src="image/logos/CSS.png" alt="Image 17">
+                      <img src="image/logos/JAVA.png" alt="Image 18">
+                      <img src="image/logos/wordpress.png" alt="Image 19">
+                      <img src="image/logos/xamp.png" alt="Image 20">
+                  </div>
+              </div>
+          </div> 
+          <!-- END MARQUEE IMAGE -->
+
+          </div>
+        </div>
+    
+      </div> <!-- End Container Profile-->
+      
+      </div>
+
+      <!--START GRAPHIC SECTION-->
+      <div id="graphic" class="section">
+        <div class="venzvision"><!-- VenzVision Banner-->
+            <a href="https://www.behance.net/venzonariola1" target="_blank">
+              <img src="image/venzvision.png" alt="Preview" />
+             </a>
+          </div><!-- VenzVision Banner-->
+      
+      <div class="basicrow"><!-- START GRID Section -->
+        <div class="gridywrap">
+          
+          <div class="gridy-2 gridyhe-1">
+            <div class="gridimg" style="background-image: url('image/gridimage/weblayout.png')">&nbsp;</div>
+            <div class="gridinfo">
+              <h3>Web Design</h3>
+              <div class="gridmeta">
+                <p class="gridwhen"><i class="fa fa-clock-o"></i> 17:22 7th May 2025</p>
+                <p class="gridwho"><i class="fa fa-user"></i> Wordpress/PHP</p>
+              </div>
+              <a href="https://www.behance.net/gallery/224281205/WordPress-Website-Development-WPBakery" class="grid-btn grid-more" target="_blank"><span><b>View</b></span> <i class="fa fa-plus"></i></a>
+            </div>
+          </div>
+
+          <div class="gridy-1 gridyhe-1">
+            <div class="gridimg" style="background-image: url('image/gridimage/logoslide.gif')">&nbsp;</div>
+            <div class="gridinfo">
+              <h3>Logos</h3>
+              <div class="gridmeta">
+                <p class="gridwhen"><i class="fa fa-clock-o"></i> 17:22 7th May 2025</p>
+                <p class="gridwho"><i class="fa fa-user"></i> Vol 1</p>
+              </div>
+              <a href="https://www.behance.net/gallery/222995045/Logo-Collection-Mockup" class="grid-btn grid-more" target="_blank"><span><b>View</b></span> <i class="fa fa-plus"></i></a>
+            </div>
+          </div>
+
+          <div class="gridy-1 gridyhe-2">
+            <div class="gridimg">
+            <video autoplay muted loop playsinline class="video-grid">
+              <source src="video/dataprivacy.mp4" type="video/mp4" >
+            </video>
+            </div>
+            <div class="gridinfo">
+              <h3>Feature Section</h3>
+              <div class="gridmeta">
+                <p class="gridwhen"><i class="fa fa-clock-o"></i> 23:22 5th May 2025</p>
+                <p class="gridwho"><i class="fa fa-user"></i> Collection</p>
+              </div>
+              <a href="https://www.behance.net/gallery/225819377/Infographic-Cybersecurity-Project" class="grid-btn grid-more" target="_blank"><span><b>View</b></span> <i class="fa fa-plus"></i></a>
+            </div>
+          </div>
+
+          <div class="gridy-2 gridyhe-1">
+            <div class="gridimg" style="background-image: url('image/gridimage/MacPC.png');">&nbsp;</div>
+            <div class="gridinfo">
+              <h3>UI/UX</h3>
+              <div class="gridmeta">
+                <p class="gridwhen"><i class="fa fa-clock-o"></i> 17:22 17th Feb 2015</p>
+                <p class="gridwho"><i class="fa fa-user"></i> Background</p>
+              </div>
+              <a href="https://www.behance.net/gallery/224201399/Attendance-Tracking-System" class="grid-btn grid-more" target="_blank"><span><b>View</b></span> <i class="fa fa-plus"></i></a>
+            </div>
+          </div>
+
+          <div class="gridy-1 gridyhe-1">
+            <div class="gridimg" style="background-image: url('image/gridimage/PNGAnimatedImageMockup.png')">&nbsp;</div>
+            <div class="gridinfo">
+              <h3>Animated Image</h3>
+              <div class="gridmeta">
+                <p class="gridwhen"><i class="fa fa-clock-o"></i> 07:38 23th March 2025</p>
+                <p class="gridwho"><i class="fa fa-user"></i> Venz Vision</p>
+              </div>
+              <a href="https://www.behance.net/gallery/224448855/Web-Portal" class="grid-btn grid-more" target="_blank"><span><b>View</b></span> <i class="fa fa-plus"></i></a>
+            </div>
+          </div>
+
+          <div class="gridy-1 gridyhe-1">
+           <div class="gridimg">
+            <video autoplay muted loop playsinline class="video-grid">
+              <source src="video/infographic.mp4" type="video/mp4" >
+            </video>
+            </div>
+            <div class="gridinfo">
+              <h3>infographics</h3>
+              <div class="gridmeta">
+                <p class="gridwhen"><i class="fa fa-clock-o"></i> 17:22 17th Feb 2015</p>
+                <p class="gridwho"><i class="fa fa-user"></i> Venz Vision</p>
+              </div>
+              <a href="https://www.behance.net/gallery/224215127/Infographic-Insights" class="grid-btn grid-more" target="_blank"><span><b>View</b></span> <i class="fa fa-plus"></i></a>
+            </div>
+          </div>
+          
+        </div>
+      </div><!-- END GRID Section -->
+
+   
+          <div class="pastelBox-container"><!-- Pastel Box Container -->
+          <div class="pastelBox">
+              <p>Graphic Designer who enjoys turning ideas into eye-catching visuals. I create infographics, vector logos, animations, and all sorts of designs mainly for our university's portal and e-learning site.</p>  
+              <br>
+              <div class="title-inline"><b>Graphic Design Tools:</b><i>Adobe Photoshop, Illustrator</i></div>
+          </div>
+          </div><!-- Pastel Box Container -->
+            
+        </div><!--END GRAPHIC SECTION-->
+
+
+      <div id="webdev" class="section"><!--START WEBDEV SECTION-->
+           <center>
+                  <div class="containerweb"><div>
+                      <video src="video/XD.mp4" autoplay muted loop playsinline></video>
+                  </div>
+                  <div>
+                     <video src="video/videoweb.mp4" autoplay muted loop playsinline></video>
+                  </div>
+                  <div>
+                     <video src="video/studentportal.mp4" autoplay muted loop playsinline></video>
+                  </div>
+                </div>
+          </center>
+
+        <div class="pastelBox-container"><!-- Pastel Box Container -->
+          <div class="pastelBox">
+              <p>As the university's Web Developer, I manage the corporate website, Sustainable Development Goals (SDGs) content, and the new research journal website. My role involves regularly updating these websites to meet the needs of our customers.</p>  
+              <br>
+              <div class="title-inline"><b>Programming and Development:</b><i>HTML PHP, CSS, XAMPP</i></div>
+              <div class="title-inline"><b>Graphic Design:</b> <i>Adobe Photoshop, Illustrator, Canva</i></div>
+              <div class="title-inline"><b>Content Management System:</b> <i>Wordpress, Penpot</i></div>
+              <div class="title-inline"><b>Web Design Tools / Wireframe:</b> <i>VS Code, Dreamweaver, Adobe XD, Figma</i></div>
+              <div class="title-inline"><b>Video Editing:</b> <i>Filmora</i></div>
+          </div>
+          </div><!-- Pastel Box Container -->
+      </div><!--END WEBDEV SECTION-->
+
+
+      <div id="ict" class="section"><!--START ICT SECTION-->
+
+         <div class="pastelBox-container"><!-- Pastel Box Container -->
+          
+
+          <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+              
+              <div class="slide"><img src="image/tech/1.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/11.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/9.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/16.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/2.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/12.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/20.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/14.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/17.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/18.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/19.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/3.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/4.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/23.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/22.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/6.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/10.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/8.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/7.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/15.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/21.jpg" alt="Preview" /></div>
+              <div class="slide"><img src="image/tech/5.jpg" alt="Preview" /></div>
+            </div>
+          </div>
+        
+          <!-- Modal -->
+          <div class="modal" id="imageModal">
+            <span class="modal-close" id="closeModal">&times;</span>
+            <span class="modal-arrow left" id="prevArrow">&#10094;</span>
+            <img id="modalImg" src="" alt="Zoomed image">
+            <span class="modal-arrow right" id="nextArrow">&#10095;</span>
+          </div>
+        
+
+
+          
+          <div class="pastelBox">
+              <p>Extensive experience in technical support, specializing in computer hardware repair, software troubleshooting, and operating systems, including OS cloning. Possesses foundational knowledge of Windows Server, along with expertise in switch and router configuration. Skilled in printer repair and maintenance, CCTV systems, and network cabling (including UTP and internet cables serving as the backbone to server infrastructure).</p>  
+              <br>
+              <div class="title-inline"><b>Networking and Configuration:</b></div>
+              <div class="title-inline"><i>Experienced in network infrastructure setup, including the configuration and deployment of Ruckus routers and Cisco switches. Proficient in cabling diagnostics using Fluke testers and cable tracers, with expertise in structured cabling and network layout planning for optimal performance and scalability</i></div>
+              <br>
+              <div class="title-inline"><b>Operating Systems:</b></div>
+              <div class="title-inline"><i>Extensive experience working with Windows desktop operating systems (XP through 11), as well as Windows Server. Familiar with legacy systems such as Windows Live Essentials and capable of supporting legacy-to-modern system transitions, software compatibility, and system recovery.</i></div>
+              <br>
+              <div class="title-inline"><b>Hardware Repair Computer/Laptop:</b></div>
+              <div class="title-inline"><i>killed in using diagnostic tools for troubleshooting and performance analysis of computer systems. Experienced in the assembly and disassembly of computer hardware, including desktops, laptops, and peripherals. Proficient with tools and equipment for component-level inspection, repair, and replacement.</i></div>
+              <br>
+              <div class="title-inline"><b>Printer Management:</b></div>
+              <div class="title-inline"><i>Experienced in the assembly and disassembly of Epson printers using specialized tools and equipment. Skilled in diagnosing hardware issues, performing part replacements, and ensuring proper reassembly for optimal printer performance.</i></div>
+              <br>
+              <div class="title-inline"><b>CCTV Systems:</b></div>
+              <div class="title-inline"><i>Experienced in managing both NVR (Network Video Recorder) and analog CCTV systems, including setup, maintenance, and backup of surveillance footage. Skilled in retrieving, archiving, and securing video data for compliance and incident investigation.</i></div>
+              <br>
+              <div class="title-inline"><b>Communication Systems:</b></div>
+              <div class="title-inline"><i>Basic knowledge in setting up and handling PABX systems, including connecting lines, setting extensions, and doing simple troubleshooting for office phones.</i></div>
+              <br>
+              <div class="title-inline"><b>Simulation Software:</b></div>
+              <div class="title-inline"><i>Support for Kongsberg and ARI marine simulators, assisting students during training, setup, and troubleshooting.</i></div>
+              <br>
+          </div>
+          </div><!-- Pastel Box Container -->
+
+      </div><!--END ICT SECTION-->
+
+
+      <div id="experience" class="section"><!--START EXPERIENCE SECTION-->
+        <center><h1>EXPERIENCE</h1></center>
+        <div class="pastelBox-container">
+            <div class="pastelBox">
+              <h2>ICT Support Engineer</h2>
+                <p>Managed and maintained network infrastructure, including servers, Ruckus routers, Cisco switches, and structured cabling systems.
+                   Designed and implemented LAN, WAN, and internet-based networks; ensured optimal performance, security, and reliability.
+                   Provided technical support and resolved network, hardware, and software issues across the organization.
+                  Installed, configured, and maintained operating systems (including Windows Server), performed system backups, cloning, and recovery using tools like Windows Live.
+                  Diagnosed and repaired computer and laptop hardware; performed upgrades and system optimization.
+                  Configured and maintained printers using advanced Windows Registry settings; assembled/disassembled units for efficiency and longevity.
+                  Configured and maintained printers using advanced Windows Registry settings; assembled/disassembled units for efficiency and longevity.
+                  Supported maritime training through Kongsberg and ARI simulator operations.
+                  Ensured compliance with security protocols and contributed to disaster recovery planning.
+                </p>
+                <br>
+                 <h2>Web Developer</h2>
+                 <p>
+                  Develop and update websites using HTML, CSS, PHP, and WordPress, integrating functionality enhancements through XAMPP environments.
+                  Collaborate with academic and administrative teams to deliver web solutions aligned with institutional goals.
+                  Design website wireframes and prototypes to visualize user interface and user experience prior to development.
+                  Monitor and maintain multiple websites managed by the department, ensuring functionality, content accuracy, and up-to-date design.
+                  Develop visual concepts and layouts using tools such as Adobe Photoshop, Adobe XD, Figma, and Illustrator for use across web, social media, and print platforms.
+                  Create infographics and visual learning materials to support student education and engagement.
+                 </p>
+                 <b>Tools and Technologies:</b><i>HTML, CSS, PHP, WordPress, XAMPP, Visual Studio Code, Dreamweaver, Adobe XD, Figma, Penpot.</i>
+                 <br>
+                 <br>
+                 <h2>Graphic Artist</h2>
+                 <p>
+                  Design infographics, vector logos, animations, and visual content for the university portal and e-learning platforms to enhance communication and user engagement.
+                  Create visually compelling graphics using Photoshop, Illustrator, and Canva, maintaining brand consistency and accessibility standards.
+                  Edit and produce multimedia content using Filmora for educational and promotional use.
+                 </p>
+                  <b>Design Tools:</b><i>Photoshop, Illustrator, Canva, Filmora.</i>
+
+          </div>
+        </div>
+      </div><!--END EXPERIENCE SECTION-->
+
+
+      <div id="projects" class="section"><!--START PROJECT SECTION-->
+        <center><h1>PROJECTS</h1></center>
+        <div class="pastelBox-container">
+            <div class="pastelBox">
+              <h2>Asia Pacific Journals Website</h2>
+                  <div><b>Institution:</b><i>Lyceum of the Philippines University – Batangas</i></div>
+                  <div><b>Link:</b><i><a href=" https://asiapjournals.org/" target="_blank" rel="noopener noreferrer"> https://asiapjournals.org/</a></i></div>
+                  <div><b>Role:</b><i>Web Developer / UI/UX Designer</i></div>
+             
+                <p>Managed and maintained network infrastructure, including servers, Ruckus routers, Cisco switches, and structured cabling systems.
+                   Designed and implemented LAN, WAN, and internet-based networks; ensured optimal performance, security, and reliability.
+                   Provided technical support and resolved network, hardware, and software issues across the organization.
+                  Installed, configured, and maintained operating systems (including Windows Server), performed system backups, cloning, and recovery using tools like Windows Live.
+                  Diagnosed and repaired computer and laptop hardware; performed upgrades and system optimization.
+                  Configured and maintained printers using advanced Windows Registry settings; assembled/disassembled units for efficiency and longevity.
+                  Configured and maintained printers using advanced Windows Registry settings; assembled/disassembled units for efficiency and longevity.
+                  Supported maritime training through Kongsberg and ARI simulator operations.
+                  Ensured compliance with security protocols and contributed to disaster recovery planning.
+                </p>
+                <br>
+                 <h2>University Sustainable Development Goals (SDGs) Website Institution</h2>
+                  <div><b>Institution:</b><i>Lyceum of the Philippines University – Batangas</i></div>
+                  <div><b>Link:</b><i><a href="https://lpubatangas.edu.ph/sustainable-development-goals/" target="_blank" rel="noopener noreferrer">https://lpubatangas.edu.ph/sustainable-development-goals/</a></i></div>
+                  <div><b>Role:</b><i>Web Developer / UI/UX Designer</i></div>
+ 
+                <p>Developed a dynamic SDGs web section aligned with the university’s advocacy for the UN Sustainable Development Goals.
+                    Highlighted educational, research, and community initiatives through visual storytelling and responsive layout.
+                    Ensured consistency with institutional branding and improved user engagement through intuitive design.
+                </p>
+                <br> 
+                <h2>Cybersecurity Web Page – University Data Protection Office</h2>
+                  <div><b>Institution:</b><i>Lyceum of the Philippines University – Batangas</i></div>
+                  <div><b>Link:</b><i><a href="https://lpubatangas.edu.ph/data-protection-office/" target="_blank" rel="noopener noreferrer">https://lpubatangas.edu.ph/data-protection-office/</a></i></div>
+                  <div><b>Role:</b><i>Web Developer / UI/UX Designer</i></div>
+
+                <p>Designed and developed a responsive web page to promote cybersecurity awareness and user education.
+                  Created accessible, informative content aligned with data privacy policies and implemented modern web standards for security and usability.
+                </p>
+                <br>
+                 <h2>MyPortal Dashboard Redesign</h2>
+                  <div><b>Institution:</b><i>Lyceum of the Philippines University – Batangas</i></div>
+                  <div><b>Link:</b><i><a href="https://myportal.lpubatangas.edu.ph/login.php" target="_blank" rel="noopener noreferrer">https://myportal.lpubatangas.edu.ph/login.php (credentials needed)</a></i></div>
+                  <div><b>Design preview:</b><i><a href="https://www.behance.net/gallery/224448855/Web-Portal" target="_blank" rel="noopener noreferrer">View on Behance</a></i></div>   
+                  <div><b>Role:</b><i>Web Developer / UI/UX Designer</i></div>
+ 
+                <p>Redesigned the MyPortal dashboard to improve accessibility, navigation, and responsiveness across devices.
+                  Created a unified, user-centered interface for accessing institutional systems, services, and resources.
+                  Enhanced user productivity through real-time updates and intuitive design structure.
+                </p><br>
+
+               <h2>Time and Attendance System</h2>
+                  <div><b>Institution:</b><i>Lyceum of the Philippines University – Batangas</i></div>
+                  <div><b>Link:</b><i><a href="https://www.behance.net/gallery/224201399/Attendance-Tracking-System" target="_blank" rel="noopener noreferrer">View on Behance</a></i></div>
+                  <div><b>Role:</b><i>Web Developer / UI/UX Designer</i></div>
+
+                <p>The Integrated Attendance and Event Monitoring System is a digital platform that tracks time-in/out and monitors participation in events for both employees and students.</p>
+                <br>
+
+                <h2>Student Portal</h2>
+                  <div><b>Institution:</b><i>Lyceum of the Philippines University – Batangas</i></div>
+                  <div><b>Link:</b><i><a href="" target="_blank" rel="noopener noreferrer">View on Behance</a></i></div>
+                  <div><b>Role:</b><i>Web Developer / UI/UX Designer</i></div>
+
+                <p>The Integrated Attendance and Event Monitoring System is a digital platform that tracks time-in/out and monitors participation in events for both employees and students.</p>
+                <br>
+
+                <h2>Corporate Website Update</h2>
+                  <div><b>Institution:</b><i>Lyceum of the Philippines University – Batangas</i></div>
+                  <div><b>Link:</b><i><a href="https://lpubatangas.edu.ph" target="_blank" rel="noopener noreferrer">https://lpubatangas.edu.ph</a></i></div>
+                  <div><b>Role:</b><i>Web Developer / UI/UX Designer</i></div>
+
+                <p>Led the corporate website redesign to align with modern web trends and institutional branding.
+                  Used WordPress, custom PHP, HTML/CSS, and Adobe XD to implement responsive layouts and improved navigation.
+                  Applied SEO best practices (via Rank Math) and ensured cross-browser compatibility and accessibility compliance.
+                </p><br>
+
+                <h2>Network Cabling Infrastructure and IT Equipment Modernization</h2>
+                  <div><b>Institution:</b><i>Lyceum of the Philippines University – Batangas</i></div>
+                  <div><b>Role:</b><i>ICT Support Engineer</i></div>
+
+                <p>Replaced and upgraded legacy network cabling to enhance connectivity, system stability, and performance.
+                  Performed structured cabling, termination, and diagnostics using Fluke testers and cable tracers.
+                  Worked closely with IT and facilities teams to minimize operational disruption during infrastructure replacement.
+                  Assisted in switch/router reconfiguration post-installation to ensure optimal network functionality.
+                  Upgraded IT equipment across multiple departments and laboratories, including the deployment of new workstations, printers, and network devices, ensuring compatibility with the enhanced infrastructure and improving overall user productivity.
+                </p>
+          </div>
+        </div>
+      </div><!--END PROJECT SECTION-->
+
+
+      <div id="trainings" class="section"><!--START TRAININGS SECTION-->
+         <center><h1>TRAININGS</h1></center>
+              <br><br>
+              <center>
+              <div class="apj-tab-wrapper">
+                 <div class="apj-tab-container">
+                      <a href="#content1" class="tab"><img src="image/tab/tebtechnical.png" alt="Tab 1" width="200" height="50"></a>
+                     <a href="#content2" class="tab"><img src="image/tab/graphic.png" alt="Tab 2" width="200" height="50"></a>
+                     <a href="#content3" class="tab"><img src="image/tab/webdev.png" alt="Tab 3" width="200" height="50"></a>
+                </div>
+
+                <div class="apj-tab-content"> 
+                     <div id="content1"><!-- TECHNICAL TAB 1 -->
+                     <br>
+                    <h3>Click a thumbnail to open the PDF</h3>
+                       <br>
+                    <div class="pdfnav1-marquee-container">
+                     <div class="pdfnav1-marquee-track">
+                          <img class="pdfnav1-thumbnail" src="pdf/certificate/2025/Operating Systems and You Becoming a Power.jpg" data-pdf="..\venzcv\pdf\certificate\2025\Operating Systems and You Becoming a Power User.pdf" alt="PDF 1" />
+                           <img class="pdfnav1-thumbnail" src="pdf/certificate/2025/Technical Support Fundamentals.jpg" data-pdf="..\venzcv\pdf\certificate\2025\Technical Support Fundamentals.pdf" alt="PDF 2" />
+                           <img class="pdfnav1-thumbnail" src="pdf/certificate/2025/The Bits and Bytes of Computer Networking.jpg" data-pdf="..\venzcv\pdf\certificate\2025\The Bits and Bytes of Computer Networking.pdf" alt="PDF 3" />
+                           <img class="pdfnav1-thumbnail" src="pdf/certificate/2025/System Administration and IT Infrastructure.jpg" data-pdf="..\venzcv\pdf\certificate\2025\System Administration and IT Infrastructure.pdf" alt="PDF 4" />
+                            <img class="pdfnav1-thumbnail" src="pdf/certificate/2024/IntroductiontoCybersecurity.jpg" data-pdf="..\venzcv\pdf\certificate\2024\IntroductiontoCybersecurity.pdf" alt="PDF 5" />
+                            <img class="pdfnav1-thumbnail" src="pdf/certificate/2025/IT Security Defense against the digital dark arts.jpg" data-pdf="..\venzcv\pdf\certificate\2025\IT Security Defense against the digital dark arts.pdf" alt="PDF 5" />
+                            <img class="pdfnav1-thumbnail" src="pdf/certificate/2025/Google IT Support.jpg" data-pdf="..\venzcv\pdf\certificate\2025\Google IT Support.pdf" alt="PDF 7" />
+                       </div>
+                     </div>
+
+                     <!-- Popup Overlay -->
+                    <div id="pdfnav1-popupOverlay">
+                     <div id="pdfnav1-popupContent">
+                     <button id="pdfnav1-closeBtn" title="Close popup">&times;</button>
+                      <button id="pdfnav1-prevBtn" class="pdfnav1-nav-button" title="Previous PDF">&#9664;</button>
+                       <button id="pdfnav1-nextBtn" class="pdfnav1-nav-button" title="Next PDF">&#9654;</button>
+                      <iframe id="pdfnav1-pdfFrame" src=""></iframe>
+                </div>
+            </div>
+         </div>
+    
+
+            <div id="content2"> <!-- GRAPHIC TAB 2 -->
+                 <br>
+                  <h3>Click a thumbnail to open the PDF</h3>
+                    <br>
+                   <div class="pdfnav2-marquee-container">
+                    <div class="pdfnav2-marquee-track">
+                   <img class="pdfnav2-thumbnail" src="pdf/certificate/2025/1Design Fundamentals.jpg" data-pdf="..\venzcv\pdf\certificate\2025\1Design Fundamentals.pdf" alt="PDF 1" />
+                   <img class="pdfnav2-thumbnail" src="pdf/certificate/2025/2Generative AI Content Creation.jpg" data-pdf="..\venzcv\pdf\certificate\2025\2Generative AI Content Creation.pdf" alt="PDF 2" />
+                   <img class="pdfnav2-thumbnail" src="pdf/certificate/2025/3Image Editing.jpg" data-pdf="..\venzcv\pdf\certificate\2025\3Image Editing.pdf" alt="PDF 3" />
+                    <img class="pdfnav2-thumbnail" src="pdf/certificate/2025/4Graphic Design.jpg" data-pdf="..\venzcv\pdf\certificate\2025\4Graphic Design.pdf" alt="PDF 4" />
+                   <img class="pdfnav2-thumbnail" src="pdf/certificate/2025/5Adobe Graphic Designer.jpg" data-pdf="..\venzcv\pdf\certificate\2025\5Adobe Graphic Designer.pdf" alt="PDF 5" />
+                  <img class="pdfnav2-thumbnail" src="pdf/certificate/2025/Document Design.jpg" data-pdf="..\venzcv\pdf\certificate\2025\Document Design.pdf" alt="PDF 5" />
+                 </div>
+            </div>
+
+              <!-- Popup Overlay -->
+                <div id="pdfnav2-popupOverlay">
+                   <div id="pdfnav2-popupContent">
+                    <button id="pdfnav2-closeBtn" title="Close popup">&times;</button>
+                    <button id="pdfnav2-prevBtn" class="pdfnav2-nav-button" title="Previous PDF">&#9664;</button>
+                    <button id="pdfnav2-nextBtn" class="pdfnav2-nav-button" title="Next PDF">&#9654;</button>
+                    <iframe id="pdfnav2-pdfFrame" src=""></iframe>
+                   </div>
+                </div>
+     
+    
+    </div>
+
+                <div id="content3"> <!-- WEB DEV TAB 3 -->
+                    <br>
+                   <h3>Click a thumbnail to open the PDF</h3>
+                    <br>
+                  <div class="pdfnav3-marquee-container">
+                  <div class="pdfnav3-marquee-track">
+                   <img class="pdfnav3-thumbnail" src="pdf/certificate/2023/Building Test Automation Framework using.jpg" data-pdf="..\venzcv\pdf\certificate\2023\Building Test Automation Framework using.pdf" alt="PDF 1" />
+                   <img class="pdfnav3-thumbnail" src="pdf/certificate/2023/Gen AI.jpg" data-pdf="..\venzcv\pdf\certificate\2023\GenAI.pdf" alt="PDF 2" />
+                   <img class="pdfnav3-thumbnail" src="pdf/certificate/2024/Google UX Design.jpg" data-pdf="..\venzcv\pdf\certificate\2024\Certificate 7 Google UX Design.pdf" alt="PDF 3" />
+                   <img class="pdfnav3-thumbnail" src="pdf/certificate/2023/1.Foundations of User Experience (UX) Design.jpg" data-pdf="..\venzcv\pdf\certificate\2023\1.Foundations of User Experience (UX) Design.pdf" alt="PDF 4" />
+                    <img class="pdfnav3-thumbnail" src="pdf/certificate/2023/2.Start the UX Design Process Empathize, Define.jpg" data-pdf="..\venzcv\pdf\certificate\2023\2.Start the UX Design Process Empathize, Define.pdf" alt="PDF 5" />
+                    <img class="pdfnav3-thumbnail" src="pdf/certificate/2023/3.Build Wireframes and Low-Fidelity Prototypes.jpg" data-pdf="..\venzcv\pdf\certificate\2023\3.Build Wireframes and Low-Fidelity Prototypes.pdf" alt="PDF 6" />
+                   <img class="pdfnav3-thumbnail" src="pdf/certificate/2024/4.Conduct UX Research and Test Early Concepts.jpg" data-pdf="..\venzcv\pdf\certificate\2024\4.Conduct UX Research and Test Early Concepts.pdf" alt="PDF 7" />
+                    <img class="pdfnav3-thumbnail" src="pdf/certificate/2024/5.Create High-Fidelity Designs and Prototypes in.jpg" data-pdf="..\venzcv\pdf\certificate\2024\5.Create High-Fidelity Designs and Prototypes in.pdf" alt="PDF 8" />
+                   <img class="pdfnav3-thumbnail" src="pdf/certificate/2024/6.Build Dynamic User Interfaces.jpg" data-pdf="..\venzcv\pdf\certificate\2024\6.Build Dynamic User Interfaces.pdf" alt="PDF 9" />
+                  <img class="pdfnav3-thumbnail" src="pdf/certificate/2024/7.Design a User Experience for Social Good.jpg" data-pdf="..\venzcv\pdf\certificate\2024\7.Design a User Experience for Social Good.pdf" alt="PDF 10" />
+                  <img class="pdfnav3-thumbnail" src="pdf/certificate/2025/System Administration and IT Infrastructure.jpg" data-pdf="..\venzcv\pdf\certificate\2025\System Administration and IT Infrastructure.pdf" alt="PDF 11" />
+               </div>
+              </div>
+
+          <!-- Popup Overlay -->
+            <div id="pdfnav3-popupOverlay">
+             <div id="pdfnav3-popupContent">
+              <button id="pdfnav3-closeBtn" title="Close popup">&times;</button>
+              <button id="pdfnav3-prevBtn" class="pdfnav3-nav-button" title="Previous PDF">&#9664;</button>
+               <button id="pdfnav3-nextBtn" class="pdfnav3-nav-button" title="Next PDF">&#9654;</button>
+              <iframe id="pdfnav3-pdfFrame" src=""></iframe>
+             </div>
+            </div>
+     
+    
+          </div>
+      
+      </div>
+  </center>
+      <div class="pastelBox-container">
+            <div class="pastelBox">
+               <p>Over the course of my career, I have participated in a diverse range of training programs to continuously enhance my technical and creative skills. These trainings have equipped me with up-to-date knowledge, practical techniques, and best practices in my fields of work, including IT support, web development, UI/UX design, and graphic arts. Below is a summary of the key training programs I have completed.</p>
+            </div>
+
+     </div>
+
+    </div><!--END TRAININGS SECTION-->
+  
+  <footer>
+    <div class="footer-text">
+      © 2025 Designed & Coded by Venzon
+    </div>
+  </footer>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
