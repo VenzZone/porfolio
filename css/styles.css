@@ -695,7 +695,7 @@ a.anchor-link {
   /*background-color: #c0c0c0; */
   text-align: center;
   position: relative;
-  top: -235px;
+  margin-top: -235px;
   z-index: 10;
 }
 
