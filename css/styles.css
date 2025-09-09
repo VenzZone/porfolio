@@ -1913,16 +1913,16 @@ footer .footer-text {
 /* Start link color styles */
 a,
 a:visited {
-  color: #808080;
-  text-decoration: none;
+  color: #808080; /* grey color */
+  text-decoration: none; /* remove underline */
 }
 
 a:hover {
-  color: #a9a9a9;
+  color: #a9a9a9; /* lighter grey on hover */
   text-decoration: underline;
 }
 
 a:active {
-  color: #666666;
+  color: #666666; /* darker grey when clicked */
 }
 /* End link color styles */
