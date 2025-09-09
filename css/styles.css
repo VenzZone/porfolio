@@ -1909,3 +1909,20 @@ footer .footer-text {
   white-space: nowrap; /* prevent breaking on smaller screens */
 }
 /* End Footer styles */
+
+/* Start link color styles */
+a,
+a:visited {
+  color: #808080;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #a9a9a9;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #666666;
+}
+/* End link color styles */
