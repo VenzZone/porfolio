@@ -1188,7 +1188,7 @@ a.anchor-link {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  width: 76%;
+  width: 80%;
   margin: 40px auto;
 }
 
@@ -1860,35 +1860,64 @@ body:not(:has(.apj-tab-wrapper .apj-tab-content > div:target))
 
 /*-- START WEB DEV SECTION --*/
 .containerweb {
-  align-content: center;
   display: flex;
-  width: 75%;
-  gap: 10px; /* Space between columns */
-  border-radius: 5px;
+  justify-content: center;
+  align-items: stretch;
+  gap: 10px;
+  max-width: 2048px;       /* total layout width limit */
+  margin: 0 190px;           /* left and right margin */
+  box-sizing: border-box;
 }
 
-.containerweb > div {
-  flex: 1; /* Equal width */
-  height: 300px; /* Fixed height for all columns */
+/* ---------- Left Column ---------- */
+.containerweb .left {
+flex: 1;
+width: auto; /* allow automatic width */
+height: auto;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
-video {
+.containerweb .left video {
   width: 100%;
-  height: 100%; /* Fill column height */
-  object-fit: cover; /* Crop video to fill without distortion */
-  display: block;
-  border-radius: 20px; /* Rounded corners */
+  height: 100%;
+  object-fit: contain;       /* fit video fully inside without cropping */
+  border-radius: 10px;
+  background: #000000;       /* background fills empty space */
 }
 
-/* Responsive: stack videos on small screens */
-@media (max-width: 768px) {
+/* ---------- Right Column ---------- */
+.containerweb .right {
+  width: 500px;   /* set your preferred width */
+  height: 927px;  /* match left column height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.containerweb .right video {
+  width: 100%;
+  height: 300px;  /* half height minus half the gap */
+  object-fit: contain;
+  border-radius: 10px;
+  background: #000;
+}
+
+/* ---------- Responsive (Mobile/Tablet) ---------- */
+@media (max-width: 1024px) {
   .containerweb {
     flex-direction: column;
+    margin: 0 20px;
   }
-  .containerweb > div {
-    height: auto; /* Let videos adjust naturally on small screens */
+
+  .containerweb .left,
+  .containerweb .right video {
+    aspect-ratio: 16 / 9;
   }
 }
+
 /*-- END WEB DEV SECTION --*/
 
 /* Start Footer styles */
