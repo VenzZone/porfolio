@@ -1862,59 +1862,62 @@ body:not(:has(.apj-tab-wrapper .apj-tab-content > div:target))
 .containerweb {
   display: flex;
   justify-content: center;
-  align-items: stretch;
-  gap: 10px;
-  max-width: 2048px;       /* total layout width limit */
-  margin: 0 190px;           /* left and right margin */
-  box-sizing: border-box;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
 }
 
-/* ---------- Left Column ---------- */
-.containerweb .left {
-flex: 1;
-width: auto; /* allow automatic width */
-height: auto;
-display: flex;
-justify-content: center;
-align-items: center;
+/* Left video (large) */
+.left {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
 }
 
-.containerweb .left video {
+.left video {
   width: 100%;
-  height: 100%;
-  object-fit: contain;       /* fit video fully inside without cropping */
+  height: auto;
   border-radius: 10px;
-  background: #000000;       /* background fills empty space */
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* ---------- Right Column ---------- */
-.containerweb .right {
-  width: 500px;   /* set your preferred width */
-  height: 927px;  /* match left column height */
+/* Right videos stack */
+.right {
+  flex: 1;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 10px;
+  gap: 20px;
 }
 
-.containerweb .right video {
+.right video {
   width: 100%;
-  height: 300px;  /* half height minus half the gap */
-  object-fit: contain;
+  height: auto;
   border-radius: 10px;
-  background: #000;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* ---------- Responsive (Mobile/Tablet) ---------- */
-@media (max-width: 1024px) {
+
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
   .containerweb {
     flex-direction: column;
-    margin: 0 20px;
+    align-items: center;
   }
 
-  .containerweb .left,
-  .containerweb .right video {
-    aspect-ratio: 16 / 9;
+  .left, .right {
+    max-width: 100%;
+  }
+
+ 
+
+  .right video, .left video {
+    width: 100%;
   }
 }
 
