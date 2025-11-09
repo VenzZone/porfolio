@@ -128,7 +128,7 @@ body {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .burger {
     display: block;
   }
@@ -295,7 +295,7 @@ body {
 }
 
 /* Optional: adjust padding and height for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .menu-bar {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 15px;
@@ -366,7 +366,7 @@ body {
   transform: translateX(-50%);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .menu-bar {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 15px;
@@ -629,7 +629,7 @@ a.anchor-link {
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .container .box {
     width: calc(50% - 30px); /* Two boxes per row with margins */
     margin: 15px; /* Adjusted margins */
@@ -845,7 +845,7 @@ a.anchor-link {
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .container .box {
     width: calc(50% - 30px); /* Two boxes per row with margins */
     margin: 15px; /* Adjusted margins */
@@ -1265,7 +1265,7 @@ a.anchor-link {
 }
 
 /* 📱 Responsive: Stack columns and full width on small screens */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .basicrow {
     width: 100%; /* Full width on small screens */
     flex-direction: column-reverse;
@@ -1314,7 +1314,7 @@ a.anchor-link {
 }
 
 /* Responsive for mobile */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .two-cols-layout {
     grid-template-columns: 1fr; /* stack vertically */
     grid-template-rows: auto;
@@ -1485,7 +1485,7 @@ body:not(:has(.apj-tab-wrapper .apj-tab-content > div:target))
   background-color: #f1f1f1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .apj-tab-wrapper .apj-tab {
     flex: 1 1 100px;
   }
@@ -1904,7 +1904,7 @@ body:not(:has(.apj-tab-wrapper .apj-tab-content > div:target))
 
 
 /* Responsive layout for small screens */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .containerweb {
     flex-direction: column;
     align-items: center;
