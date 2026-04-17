@@ -321,3 +321,33 @@ pdfnav3_nextBtn.addEventListener("click", (e) => {
     pdfnav3_thumbsArray[pdfnav3_currentIndex].getAttribute("data-pdf");
 });
 /*-- END PDF and MODAL TAB 3 WEB DEV--*/
+
+
+
+/*-- START ACCORDION --*/
+  $(document).ready(function () {
+        $(".accordion__title").click(function (e) {
+          e.preventDefault();
+
+          var $this = $(this);
+          var $content = $this.next();
+
+          if ($this.hasClass("active")) {
+            // If already open, close it
+            $this.removeClass("active");
+            $content.slideUp("fast");
+          } else {
+            // Remove active from all titles and slide all contents up
+            $(".accordion__title").removeClass("active");
+            $(".accordion__content").slideUp("fast");
+
+            // Open the clicked one
+            $this.addClass("active");
+            $content.slideDown("fast");
+          }
+        });
+      });
+
+
+
+/*-- END ACCORDION --*/
