@@ -52,7 +52,7 @@ body {
   text-align: center;
 }
 
-/* Profile section */
+/* Profile section VENZONE TEXT */
 .profile-column {
   display: flex;
   align-items: center;
@@ -60,30 +60,23 @@ body {
   flex: 1 1 auto;
 }
 
-.profile {
+.profile {/* css ng VENZON TEXT */
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
 /* Brand name styling */
-.brand-name {
-  font-size: 2rem;
-  color: #d4d4d4;
-  font-family: Avenir Next, Helvetica Neue, Helvetica, Tahoma, sans-serif;
-  font-weight: 700;
-  white-space: nowrap;
-  display: flex;
-  flex-wrap: wrap;
-}
 
-/* Profile photo */
+
+/* Profile photo ICON USER beside Venzon */
 .profile-photo {
   width: 70px;
   height: 70px;
   border-radius: 50%;
 }
 
+/*Column Icon of social media */
 .image-container .image {
   width: 30px;
   height: 30px;
@@ -103,8 +96,9 @@ body {
   align-items: center;
   gap: 5px;
 }
+
+  /* Column ng Download CV button */
 .cv-wrapper {
-  /* Download CV button to right  */
   display: flex;
   justify-content: flex-end; /* Pushes the button to the right */
 }
@@ -136,7 +130,7 @@ body {
   .header-bar {
     flex-direction: column;
     align-items: stretch;
-    padding-top: 60px;
+    /* padding-top: 60px; */ 
     max-height: none;
   }
 
@@ -151,10 +145,7 @@ body {
     display: flex;
   }
 
-  .brand-name {
-    font-size: 1.5rem;
-    justify-content: center;
-  }
+
 
   .profile-photo {
     width: 50px;
@@ -163,9 +154,7 @@ body {
 }
 
 @media (max-width: 480px) {
-  .brand-name {
-    font-size: 1.2rem;
-  }
+
 
   .section {
     padding: 60px 10px;
@@ -219,6 +208,58 @@ body {
   }
 }
 /* END Social MEDIA ICON*/
+
+/* Start Dark mode styles */
+/* Dark mode toggle */
+.dark-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.dark-mode {
+  background: #121212;
+  color: #f0f0f0;
+}
+
+.dark-mode .header-bar,
+.dark-mode .menu-bar,
+.dark-mode .dropdown {
+  background: rgba(30, 30, 30, 0.9);
+  color: #fff;
+}
+
+.dark-mode .menu-item {
+  color: #ccc;
+}
+
+.dark-mode .menu-item i {
+  color: #ccc;
+}
+
+.dark-mode .menu-item:hover,
+.dark-mode .menu-item.active {
+  color: #00bfff;
+}
+
+.dark-mode .dropdown a {
+  color: #f0f0f0;
+}
+
+.dark-mode .dropdown a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .header-column {
+  color: #f0f0f0;
+}
+
+.dark-mode .dark-toggle {
+  color: #f0f0f0;
+}
+/* End Dark mode styles */
+
+
 
 /* START DOWNLOAD BUTTON */
 .cv-button {
@@ -278,7 +319,7 @@ body {
 .menu-bar {
   background: #fff;
   padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   max-width: 720px;
   width: 100%;
@@ -389,62 +430,15 @@ a.anchor-link {
 
 /* End  MENU BAR */
 
-/* Start Dark mode styles */
-/* Dark mode toggle */
-.dark-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-.dark-mode {
-  background: #121212;
-  color: #f0f0f0;
-}
 
-.dark-mode .header-bar,
-.dark-mode .menu-bar,
-.dark-mode .dropdown {
-  background: rgba(30, 30, 30, 0.9);
-  color: #fff;
-}
-
-.dark-mode .menu-item {
-  color: #ccc;
-}
-
-.dark-mode .menu-item i {
-  color: #ccc;
-}
-
-.dark-mode .menu-item:hover,
-.dark-mode .menu-item.active {
-  color: #00bfff;
-}
-
-.dark-mode .dropdown a {
-  color: #f0f0f0;
-}
-
-.dark-mode .dropdown a:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.dark-mode .header-column {
-  color: #f0f0f0;
-}
-
-.dark-mode .dark-toggle {
-  color: #f0f0f0;
-}
-/* End Dark mode styles */
 
 /* START VENZON TEXT */
 .fancy-text {
   color: #d4d4d4;
   font-family: Avenir Next, Helvetica Neue, Helvetica, Tahoma, sans-serif;
-  font-size: 16px; /* Base font size */
+  font-size: 32px; /* Increased from 16px */
   font-weight: 700;
+  
 }
 
 .fancy-text span {
@@ -688,6 +682,8 @@ a.anchor-link {
   width: 500px;
   height: auto;
   border-radius: 8px;
+
+
 }
 
 .row2 {
@@ -727,7 +723,7 @@ a.anchor-link {
 
   .col-40 img {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
   }
 }
 
@@ -953,6 +949,7 @@ a.anchor-link {
   box-sizing: border-box;
   background-color: #fff; /* Optional: background to make it pop */
   border-radius: 20px;
+  
 }
 
 .gridywrap div[class*="gridy"] {
@@ -1043,6 +1040,7 @@ a.anchor-link {
   height: 100%;
   top: 0;
   left: 0;
+  /*background: rgba(0, 0, 0, 0.5);*/ /* Initial background with opacity */
   background: rgba(0, 0, 0, 0.4);
   text-align: center;
   transition: all 0.8s;
@@ -1076,7 +1074,7 @@ a.anchor-link {
   margin-right: 5px;
 }
 .gridywrap .gridinfo .gridmeta p.gridwho {
-  margin-left: 25px;
+  margin-left: 0px;
 }
 .gridywrap .gridinfo p.gridexerpt {
   width: 60%;
@@ -1125,13 +1123,14 @@ a.anchor-link {
 }
 
 .gridywrap .gridinfo:hover * {
-  opacity: 0.7;
+  opacity: 100; /* Show View Color */
 }
 .gridywrap .gridinfo:hover p {
   opacity: 1;
 }
+/* Background color on hover */
 .gridywrap .gridinfo:hover {
-  background: rgba(158, 12, 73, 0.7);
+  background: rgba(158, 12, 73, 0.7); 
 }
 .gridywrap .gridinfo:hover h3 {
   margin-top: 70px;
@@ -1229,6 +1228,11 @@ a.anchor-link {
 }
 
 @media (max-width: 600px) {
+  .pastelBox-container {
+    width: 95%;
+    margin: 20px auto;
+  }
+
   .pastelBox {
     flex: 1 1 100%;
   }
@@ -1278,17 +1282,7 @@ a.anchor-link {
 }
 /*-- END BASIC ROW --*/
 
-/*-- START TEXT --*/
-.title-inline {
-  display: flex;
-  align-items: center;
-  gap: 8px; /* space between heading and italic text */
-}
 
-.title-inline h3 {
-  margin: 0; /* remove default spacing */
-}
-/*-- END TEXT  --*/
 
 /*-- START COLUMN WEB DIV  --*/
 .two-cols-layout {
@@ -1958,3 +1952,263 @@ a:active {
   color: #666666; /* darker grey when clicked */
 }
 /* End link color styles */
+
+
+/*-- START ACCORDION and PREVIEW --*/
+.wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+      .accordion {
+        display: block;
+        position: relative;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+      }
+
+      .accordion__item {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      .accordion__item:last-child {
+        margin-bottom: 0;
+      }
+      .accordion__title {
+        display: block;
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        padding: 0px 50px 0 10px;
+        font-size: 25px;
+        font-weight: 700;
+        color: #4096f3;
+        border: 1px solid #eee;
+        text-decoration: none;
+        overflow: hidden;
+        transition: background-color 0.2s;
+      }
+
+      .accordion__title:hover {
+        background-color: #fd6209;
+        color: #fff; /* title color when pointing a mouse */
+      }
+
+      .accordion__title.active {
+        background: #fd6209;
+        color: #fff;
+      }
+
+      /* Icon Animation States */
+      .accordion__title.active .x7 {
+        transform: rotate(-90deg);
+      }
+
+      .accordion__title.active .x7 .btop {
+        width: 67%;
+        top: 2px;
+        transform: translateY(-50%) rotate(-45deg);
+        transform-origin: 50% 50%;
+      }
+
+      .accordion__title.active .x7 .bmid {
+        opacity: 0;
+      }
+
+      .accordion__title.active .x7 .bbot {
+        width: 67%;
+        bottom: 2px;
+        transform: translateY(50%) rotate(45deg);
+        transform-origin: 50% 50%;
+      }
+
+      .accordion__content {
+        display: none;
+        position: relative;
+        overflow: hidden;
+        /* border: 1px solid #eee; */
+        border-top: none;
+        line-height: 1.65;
+        padding: 25px;
+        /* background-color: #fff; */
+        font-size: 0.875em;
+      }
+
+      /* --- Icon Drawing --- */
+      .bmenu {
+        width: 26px;
+        height: 16px;
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 12px;
+      }
+
+      .btop,
+      .bmid,
+      .bbot {
+        right: 0;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        background-color: #444444;
+        border-radius: 1px;
+      }
+
+      .btop {
+        width: 40%;
+        top: 0;
+      }
+      .bmid {
+        width: 60%;
+        top: calc(50% - 1px);
+      }
+      .bbot {
+        width: 80%;
+        bottom: 0;
+      }
+
+      .x7 {
+        transition: transform 0.3s ease-out;
+        transform-origin: 60% 75%;
+      }
+
+      .x7 .btop {
+        transition:
+          width 0.3s,
+          transform 0.3s,
+          top 0s;
+        transition-timing-function: ease-out;
+      }
+
+      .x7 .bmid {
+        transform-origin: 100% 50%;
+        transition: opacity 0.1s;
+        transition-timing-function: ease-out;
+      }
+
+      .x7 .bbot {
+        transition:
+          width 0.3s,
+          transform 0.3s,
+          bottom 0s;
+        transition-timing-function: ease-out;
+      }
+      
+/*-- END ACCORDION and PREVIEW --*/
+
+
+/*-- TITLE  --*/
+  
+/*-- END TITLE --*/
+
+
+/*-- START PARAGRAPH STYLES --*/
+p {
+  font-family: "Inter", "Poppins", "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+p.small {
+  font-size: 14px;
+}
+
+p.large {
+  font-size: 18px;
+}
+
+p.lead {
+  font-size: 18px;
+  font-weight: 500;
+  color: #555;
+}
+
+
+.dark-mode p {
+  color: #f0f0f0;
+}
+
+p.bold {
+  font-weight: bold;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+p.bold-italic {
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+h1 {
+  font-family: "Inter", "Poppins", "Segoe UI", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  /* margin-bottom: 20px; */
+  line-height: 1.3;
+}
+
+h2 {
+  font-family: "Inter", "Poppins", "Segoe UI", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  /* margin-bottom: 18px; */
+  line-height: 1.3;
+}
+
+h3 {
+  font-family: "Inter", "Poppins", "Segoe UI", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  /* margin-bottom: 15px; */
+  line-height: 1.3;
+}
+
+h4 {
+  font-family: "Inter", "Poppins", "Segoe UI", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  /* margin-bottom: 12px; */
+  line-height: 1.3;
+}
+
+h5 {
+  font-family: "Inter", "Poppins", "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c2b2b;
+  /* margin-bottom: 10px; */
+  line-height: 1.3;
+}
+
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5 {
+  color: #f0f0f0;
+}
+
+.row {
+  display: flex;
+  gap: 5px; /* space between text */
+}
+
+
+/*-- END PARAGRAPH STYLES --*/
